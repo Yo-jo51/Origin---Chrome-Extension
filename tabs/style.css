@@ -1,0 +1,234 @@
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Animation */
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* Base */
+body {
+  background: #1a1a2e;
+  min-height: 100dvh;
+  font-family: 'Fredoka', sans-serif;
+  color: white;
+  transition: background 2s ease;
+  padding: clamp(12px, 2vh, 24px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: clamp(30px, 7vh, 80px);
+  padding-bottom: clamp(15px, 3vh, 30px);
+  gap: clamp(20px, 4vh, 45px); /* Kompakterer Gesamtabstand */
+}
+
+/* Clock Container */
+.clock-widget {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#clock {
+  font-size: clamp(4rem, 12vw, 9.5rem); /* Verkleinert von max 13rem */
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  opacity: 0;
+  animation: slideInLeft 0.8s ease 0.2s forwards;
+}
+
+#date {
+  font-size: clamp(1.3rem, 3.5vw, 2.0rem); /* Verkleinert von max 2.8rem */
+  font-weight: 300;
+  opacity: 0;
+  animation: slideInLeft 0.8s ease 0.5s forwards;
+  margin-top: 6px;
+}
+
+#greeting {
+  font-size: clamp(1.4rem, 4.2vw, 2.3rem); /* Verkleinert von max 3.2rem */
+  font-weight: 500;
+  opacity: 0;
+  animation: slideInLeft 0.9s ease 0.8s forwards;
+  margin-top: 8px;
+}
+
+/* Weather */
+#weather {
+  display: flex;
+  gap: 14px;
+  align-items: baseline;
+  justify-content: center;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+#location {
+  font-size: clamp(1.3rem, 3.5vw, 1.9rem);
+  font-weight: 300;
+  opacity: 0.7;
+}
+
+#temperature {
+  font-size: clamp(1.4rem, 3.8vw, 2.1rem);
+  font-weight: 200;
+}
+
+#feels-like {
+  font-size: clamp(1.2rem, 3.2vw, 1.8rem);
+  font-weight: 300;
+  opacity: 0.6;
+}
+
+/* Bottom Group */
+.bottom-group {
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(20px, 4vh, 40px); /* Engerer Abstand unten */
+  width: 100%;
+}
+
+/* Search Bar */
+form {
+  order: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0 10px;
+}
+
+#search {
+  width: min(800px, 88vw); /* Schmalere maximale Breite von 800px */
+  max-width: 100%;
+  padding: 14px 24px; /* Flacheres Eingabefeld */
+  border: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  transition: all 0.3s ease;
+  color: white;
+  font-family: 'Fredoka', sans-serif;
+  font-size: clamp(1.2rem, 3vw, 1.7rem); /* Kleinere Schriftgröße */
+  text-align: center;
+  outline: none;
+}
+
+#search:focus {
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4),
+              0 0 20px rgba(255, 255, 255, 0.15);
+  transform: translateY(-4px);
+  backdrop-filter: blur(12px);
+}
+
+#search::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+/* Shortcuts */
+.shortcuts {
+  order: 2;
+  display: flex;
+  gap: clamp(14px, 3vw, 28px); /* Engere Abstände zwischen Icons */
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.shortcut {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: white;
+  font-size: clamp(0.9rem, 2.2vw, 1.1rem); /* Kleinere Beschriftung */
+  opacity: 0.85;
+  transition: all 0.25s ease;
+  min-width: 64px;
+}
+
+.shortcut img {
+  width: 54px; /* Deutlich kompaktere Icons (vorher 78px) */
+  height: 54px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.shortcut:hover {
+  opacity: 1;
+  transform: translateY(-4px);
+}
+
+/* Settings Button */
+#settings-btn {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 100;
+  border: none;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 12px;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+}
+
+#settings-btn img {
+  width: 32px; /* Kleinerer Einstellungs-Button */
+  height: 32px;
+}
+
+/* Footer */
+footer {
+  position: fixed;
+  left: 2vw;
+  bottom: 2vh;
+  opacity: 0;
+  animation: slideInLeft 1s ease 1.5s forwards;
+  z-index: 10;
+}
+
+footer span {
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+  font-weight: 300;
+  opacity: 0.2;
+}
+
+/* Media Queries für Mobilgeräte */
+@media (max-width: 480px) {
+  .shortcut {
+    min-width: 58px;
+    padding: 6px 8px;
+  }
+
+  .shortcut img {
+    width: 46px;
+    height: 46px;
+  }
+
+  #search {
+    padding: 12px 18px;
+  }
+}

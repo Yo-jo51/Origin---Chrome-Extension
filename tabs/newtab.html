@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Tab</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+
+        <!-- Clock & Weather Widget -->
+        <section class="clock-widget">
+            <div id="clock"></div>
+            <div id="date"></div>
+            <div id="greeting"></div>
+
+            <div id="weather">
+                <div id="location">Loading...</div>
+                <div id="temperature">--°C</div>
+                <div id="feels-like">Feels: --°C</div>
+            </div>
+        </section>
+
+        <!-- Search + Shortcuts Gruppe -->
+<div class="bottom-group">
+
+  <form action="https://www.google.com/search" method="get">
+    <input
+      type="text"
+      name="q"
+      id="search"
+      placeholder="Search Google..."
+      autocomplete="off"
+    >
+  </form>
+
+  <section class="shortcuts">
+    <a href="" class="shortcut">
+      <img src="" alt="">
+      <span></span>
+    </a>
+    <a href="" class="shortcut">
+      <img src="" alt="">
+      <span></span>
+    </a>
+    <a href="" class="shortcut">
+      <img src="" alt="">
+      <span></span>
+    </a>
+  </section>
+
+  <button id="settings-btn"><img src="/Resources/images/settings.ico"></img></button>
+
+</div>
+    </main>
+
+    <footer>
+        <span>Origin - minimal new tab prototype version 1.0</span>
+    </footer>
+
+    <script src="/tabs/script.js"></script>
+</body>
+</html>
