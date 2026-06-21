@@ -100,22 +100,28 @@ input:focus {
   border-color: rgba(255,255,255,0.25);
 }
 
-/* BUTTON */
-#save {
-  margin-top: var(--space-5);
+/* Buttons */
 
-  height: 44px;
-  padding: 0 var(--space-4);
-
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-
-  background: transparent;
-  color: var(--text);
-
-  cursor: pointer;
+.buttons {
+  display: flex;
+  gap: 10px;
 }
 
-#save:hover {
-  border-color: rgba(255,255,255,0.2);
+#save, 
+#back {
+  margin-top: var(--space-5);
+  height: 44px;
+  padding: 0 var(--space-4);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+#save:hover, 
+#back:hover {
+  border-color: rgba(255, 255, 255, 0.2);
 }
