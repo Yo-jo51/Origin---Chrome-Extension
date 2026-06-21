@@ -91,7 +91,7 @@ document.getElementById("settings-btn").addEventListener("click", () => {
 //sound system beim schreiben
 document.addEventListener('DOMContentLoaded', () => {
   const searchInput = document.getElementById('search');
-  const soundURL = chrome.runtime.getURL('Resources/Audio/ButtonPres.wav');
+  const soundURL = chrome.runtime.getURL('Resources/audio/ButtonPres.wav');
 
   searchInput.addEventListener('keydown', (e) => {
     console.log(e.repeat);

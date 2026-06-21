@@ -33,3 +33,10 @@
   font-size: var(--font-size-sm);
   color: var(--color-text-muted);
 }
+
+@media only screen and (height > 800px) and (width > 1600) {
+  #clock{
+    font-size: 8rem;
+    font-weight: 600;
+  }
+}

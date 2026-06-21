@@ -6,7 +6,18 @@ form {
 
 
 #search {
-  width: 100%;
+  /* 1. FORCE ABSOLUTE POSITIONING */
+  position: absolute;
+  inset: 0;
+  margin: auto;
+
+  /* 2. CHANGE WIDTH FROM 100% TO A FIXED/MAX WIDTH */
+  /* If width is 100%, it cannot sit "in the middle" because it fills the whole space */
+  width: 90%; 
+  max-width: 500px; 
+  height: fit-content; /* Allows padding to define the height */
+
+  /* Your original styles */
   padding: var(--space-3) var(--space-5);
   font-family: var(--font);
   font-size: var(--font-size-md);
