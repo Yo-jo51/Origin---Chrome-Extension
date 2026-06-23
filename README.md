@@ -2,8 +2,12 @@ ORIGIN - MINIMAL NEW TAB
 
 A simple and very minimal New Tab extension for your browser.
 
-![Project Preview](Resources\images\preview.png)
-
+<details>
+  <summary>📸 Click here to see screenshots & preview</summary>
+  <br>
+  <img src="path/to/screenshot1.png" alt="Main Dashboard" width="100%">
+  <img src="path/to/screenshot2.png" alt="Settings Page" width="100%">
+</details>
 
 INSTALLATION
 
